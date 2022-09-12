@@ -1,0 +1,99 @@
+@import "../abstract/variables";
+.card {
+  display: flex;
+  width: 50rem;
+  border-radius: 1rem;
+
+  & {
+    @media screen and (max-width: 520px) {
+      flex-direction: column;
+      width: 32rem;
+    }
+  }
+
+  &__img-size {
+    width: 25rem;
+    border-radius: 1rem 0 0 1rem;
+
+    & {
+      @media screen and (max-width: 520px) {
+        width: 32rem;
+      }
+    }
+  }
+
+  &__info {
+    background-color: $White;
+    padding: 2rem;
+    border-radius: 0 1rem 1rem 0;
+  }
+
+  &__main-title {
+    display: block;
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-family: $firstFamily;
+    letter-spacing: 0.4rem;
+    color: $Darkgrayish;
+  }
+
+  &__title {
+    display: block;
+    font-size: 2.8rem;
+    font-weight: 700;
+    text-transform: capitalize;
+    font-family: $secondFamily;
+  }
+
+  &__description {
+    font-size: 1.3rem;
+    font-family: $firstFamily;
+    color: $Darkgrayish;
+    line-height: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  &__price {
+    font-size: 3rem;
+    color: $DarkCyan;
+    font-weight: 600;
+    font-family: $secondFamily;
+    margin-right: 0.5rem;
+  }
+
+  &__strikethroughPrice {
+    color: $Darkgrayish;
+    font-size: 1.4rem;
+    text-decoration: line-through;
+    display: inline-block;
+  }
+
+  &__button {
+    align-items: center;
+    background-color: $DarkCyan;
+    border-radius: 0.4rem;
+    color: $White;
+    display: flex;
+    height: 2.6rem;
+    justify-content: center;
+    margin-top: 1.8rem;
+    padding: 0.8rem 1.6rem;
+    width: 18rem;
+
+    &:hover {
+      cursor: pointer;
+      background-color: darken($DarkCyan, 10%);
+    }
+
+    & img {
+      margin-right: 0.5rem;
+    }
+
+    & {
+      @media screen and (max-width: 520px) {
+        width: unset;
+      }
+    }
+  }
+}
